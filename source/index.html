@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body class="page__body">
+  <header class="header">
+    <nav class="navigation">
+      <a class="navigation__logo logo" href="#">
+        <img class="logo__image" src="images/logo-mobile.svg" alt="Логотип компании." width="32" height="36">
+      </a>
+      <ul class="navigation__user-list user-list">
+        <li class="user-list__item">
+          <a class="user-list__link user-list__link--user" href="#">
+            <span class="visually-hidden">Личный кабинет.</span>
+          </a>
+        </li>
+        <li class="user-list__item">
+          <a class="user-list__link user-list__link--basket" href="#">
+            <span class="visually-hidden">Корзина.</span>
+          </a>
+        </li>
+      </ul>
+      <button class="navigation__button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+      <ul class="navigation__links-list links-list">
+        <li class="links-list__item">
+          <a class="links-list__link" href="#">Главная</a>
+        </li>
+        <li class="links-list__item">
+          <a class="links-list__link" href="#">Каталог</a>
+        </li>
+        <li class="links-list__item">
+          <a class="links-list__link" href="#">Доставка</a>
+        </li>
+        <li class="links-list__item">
+          <a class="links-list__link" href="#">О нас</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</body>
+
 </html>
