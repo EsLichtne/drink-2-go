@@ -21,13 +21,29 @@
   @media (min-width: variables.$tablet-width) {
     border: none;
   }
+
+  &:last-child {
+    border-bottom: 1px solid variables.$color-secondary;
+
+    @media (min-width: variables.$tablet-width) {
+      border: none;
+    }
+  }
 }
 
-.links-list__item:last-child {
-  border-bottom: 1px solid variables.$color-secondary;
-
+.links-list__item:has(.links-list__link--current) {
   @media (min-width: variables.$tablet-width) {
-    border: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: variables.$color-primary;
+    }
   }
 }
 
@@ -45,32 +61,20 @@
   @media (min-width: variables.$tablet-width) {
     padding: 32px 21px;
   }
-}
 
-.links-list__item:has(.links-list__link--current) {
-  position: relative;
-}
+  &--current {
+    @media (min-width: variables.$tablet-width) {
+      color: variables.$color-primary;
+    }
+  }
 
-.links-list__item:has(.links-list__link--current)::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: variables.$color-primary;
-}
+  &:hover,
+  &:focus {
+    color: variables.$text-accent;
+  }
 
-.links-list__link--current {
-  color: variables.$color-primary;
-}
-
-.links-list__link:hover,
-.links-list__link:focus {
-  color: variables.$text-accent;
-}
-
-.links-list__link:active {
-  color: variables.$text-primary;
-  background-color: variables.$color-secondary;
+  &:active {
+    color: variables.$text-primary;
+    background-color: variables.$color-secondary;
+  }
 }

@@ -78,17 +78,17 @@
   @media (min-width: variables.$tablet-width) {
     display: none;
   }
-}
 
-.navigation__button::before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  mask-image: url("../../images/icons/stack.svg#burger-button");
-  background-color: variables.$text-primary;
-  background-size: contain;
-}
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    mask-image: url("../../images/icons/stack.svg#burger-button");
+    background-color: variables.$text-primary;
+    background-size: contain;
+  }
 
-.navigation__button:active {
-  background-color: variables.$color-secondary;
+  &:active {
+    background-color: variables.$color-secondary;
+  }
 }
