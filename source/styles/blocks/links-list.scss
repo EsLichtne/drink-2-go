@@ -9,6 +9,10 @@
   @media (min-width: variables.$tablet-width) {
     display: flex;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    gap: 20px;
+  }
 }
 
 .links-list__item {
@@ -61,7 +65,8 @@
   color: variables.$color-primary;
 }
 
-.links-list__link:hover {
+.links-list__link:hover,
+.links-list__link:focus {
   color: variables.$text-accent;
 }
 
