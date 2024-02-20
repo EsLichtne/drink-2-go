@@ -24,6 +24,7 @@
 
 .navigation--open .navigation__links-list {
   display: grid;
+  z-index: 1;
 }
 
 .navigation__logo {
