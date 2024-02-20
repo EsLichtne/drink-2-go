@@ -3,12 +3,18 @@
 .navigation {
   position: relative;
   display: flex;
+  align-items: center;
   width: variables.$mobile-width;
   margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
     width: variables.$tablet-width;
     padding: 0 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: variables.$desktop-width;
+    padding: 0 40px;
   }
 }
 
@@ -26,13 +32,21 @@
   margin-right: auto;
 
   @media (min-width: variables.$tablet-width) {
-    width: 122px;
+    width: 102px;
     height: 80px;
     margin-right: 47px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 190px;
+    margin: 0;
   }
 }
 
 .navigation__capture {
+  max-width: 150px;
+  margin: 0;
+  margin-right: 138px;
   font-size: 12px;
   line-height: 16px;
 
