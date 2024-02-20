@@ -16,4 +16,9 @@
     width: 82px;
     height: 36px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 170px;
+    height: 36px;
+  }
 }
