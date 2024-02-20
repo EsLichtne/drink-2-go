@@ -3,6 +3,8 @@
 .navigation {
   position: relative;
   display: flex;
+  width: variables.$mobile-width;
+  margin: 0 auto;
 }
 
 .navigation--open .navigation__button::before {
