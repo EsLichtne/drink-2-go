@@ -1,0 +1,37 @@
+@use "./global/variables.scss";
+@use "./global/mixins.scss";
+
+.links-list {
+  @include mixins.list-reset;
+  display: grid;
+  text-align: center;
+}
+
+.links-list__item {
+  border-top: 1px solid variables.$color-secondary;
+}
+
+.links-list__item:last-child {
+  border-bottom: 1px solid variables.$color-secondary;
+}
+
+.links-list__link {
+  display: block;
+  padding: 20px 128px;
+  padding-left: 125px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: variables.$text-primary;
+}
+
+.links-list__link:hover {
+  color: variables.$text-accent;
+}
+
+.links-list__link:active {
+  color: variables.$text-primary;
+  background-color: variables.$color-secondary;
+}
