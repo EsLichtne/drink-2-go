@@ -2,9 +2,18 @@
 
 .logo {
   padding: 12px 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 22px 20px;
+  }
 }
 
 .logo__image {
   width: 32px;
   height: 36px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 82px;
+    height: 36px;
+  }
 }
