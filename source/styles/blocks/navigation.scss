@@ -8,7 +8,7 @@
 
   @media (min-width: variables.$tablet-width) {
     width: variables.$tablet-width;
-    padding-right: 20px;
+    padding: 0 20px;
   }
 }
 
@@ -29,6 +29,27 @@
     width: 122px;
     height: 80px;
     margin-right: 47px;
+  }
+}
+
+.navigation__capture {
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (max-width: 1439px) {
+    display: none;
+  }
+}
+
+.navigation__links-list {
+  position: absolute;
+  top: 60px;
+  display: none;
+
+  @media (min-width: variables.$tablet-width) {
+    position: static;
+    display: flex;
+    margin-right: auto;
   }
 }
 
@@ -56,16 +77,4 @@
 
 .navigation__button:active {
   background-color: variables.$color-secondary;
-}
-
-.navigation__links-list {
-  position: absolute;
-  top: 60px;
-  display: none;
-
-  @media (min-width: variables.$tablet-width) {
-    position: static;
-    display: flex;
-    margin-right: auto;
-  }
 }
