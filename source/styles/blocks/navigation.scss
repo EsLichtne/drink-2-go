@@ -5,6 +5,14 @@
   display: flex;
 }
 
+.navigation--open .navigation__button::before {
+  mask-image: url("../../images/icons/stack.svg#close-button");
+}
+
+.navigation--open .navigation__links-list {
+  display: grid;
+}
+
 .navigation__logo {
   width: 72px;
   height: 60px;
@@ -34,6 +42,7 @@
 }
 
 .navigation__links-list {
+  display: none;
   position: absolute;
   top: 60px;
   width: 100%;
