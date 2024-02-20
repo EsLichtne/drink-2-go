@@ -5,14 +5,26 @@
   @include mixins.list-reset;
   display: grid;
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+  }
 }
 
 .links-list__item {
   border-top: 1px solid variables.$color-secondary;
+
+  @media (min-width: variables.$tablet-width) {
+    border: none;
+  }
 }
 
 .links-list__item:last-child {
   border-bottom: 1px solid variables.$color-secondary;
+
+  @media (min-width: variables.$tablet-width) {
+    border: none;
+  }
 }
 
 .links-list__link {
@@ -25,6 +37,28 @@
   text-transform: uppercase;
   text-decoration: none;
   color: variables.$text-primary;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 32px 21px;
+  }
+}
+
+.links-list__item:has(.links-list__link--current) {
+  position: relative;
+}
+
+.links-list__item:has(.links-list__link--current)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: variables.$color-primary;
+}
+
+.links-list__link--current {
+  color: variables.$color-primary;
 }
 
 .links-list__link:hover {
