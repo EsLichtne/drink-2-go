@@ -5,15 +5,31 @@
   @include mixins.list-reset;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: variables.$desktop-width) {
+    gap: 20px;
+  }
 }
 
 .user-list__link {
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 22px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: variables.$text-primary;
 
   @media (min-width: variables.$tablet-width) {
     padding: 32px 22px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 32px 21px;
   }
 }
 
@@ -33,6 +49,11 @@
   mask-image: url("../../images/icons/stack.svg#basket");
 }
 
+.user-list__link:hover,
+.user-list__link:focus {
+  color: variables.$text-accent;
+}
+
 .user-list__link:hover::before {
   background-color: variables.$text-accent;
 }
@@ -43,4 +64,14 @@
 
 .user-list__link:active::before {
   background-color: variables.$text-primary;
+
+  @media (min-width: variables.$tablet-width) {
+    background-color: variables.$text-accent;
+  }
+}
+
+.user-list__capture {
+  @media (max-width: 1439px) {
+    display: none;
+  }
 }
