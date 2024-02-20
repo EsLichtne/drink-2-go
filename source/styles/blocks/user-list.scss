@@ -1,0 +1,42 @@
+@use "./global/variables.scss";
+@use "./global/mixins.scss";
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  @include mixins.list-reset;
+}
+
+.user-list__link {
+  display: grid;
+  place-content: center;
+  padding: 22px;
+}
+
+.user-list__link::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: variables.$text-primary;
+  background-size: contain;
+}
+
+.user-list__link--user::before {
+  mask-image: url("../../images/icons/stack.svg#user");
+}
+
+.user-list__link--basket::before {
+  mask-image: url("../../images/icons/stack.svg#basket");
+}
+
+.user-list__link:hover::before {
+  background-color: variables.$text-accent;
+}
+
+.user-list__link:active {
+  background-color: variables.$color-secondary;
+}
+
+.user-list__link:active::before {
+  background-color: variables.$text-primary;
+}
