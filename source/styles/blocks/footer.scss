@@ -1,0 +1,49 @@
+@use "./global/variables.scss";
+@use "./global/mixins.scss";
+
+.footer {
+  background-color: variables.$background-primary;
+}
+
+.footer__header {
+  display: flex;
+  padding: 22px 0;
+}
+
+.footer__logo {
+  margin-right: auto;
+}
+
+.footer__logo-image {
+  width: 82px;
+  height: 36px;
+}
+
+.footer__section-wrapper {
+  padding: 20px 0;
+}
+
+.footer__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: variables.$text-accent;
+}
+
+.footer__list {
+  @include mixins.list-reset;
+  display: grid;
+  gap: 4px;
+}
+
+.footer__link {
+  display: block;
+  padding: 8px 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: variables.$text-primary;
+}
