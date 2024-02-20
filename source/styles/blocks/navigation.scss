@@ -5,6 +5,11 @@
   display: flex;
   width: variables.$mobile-width;
   margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: variables.$tablet-width;
+    padding-right: 20px;
+  }
 }
 
 .navigation--open .navigation__button::before {
@@ -19,6 +24,12 @@
   width: 72px;
   height: 60px;
   margin-right: auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 122px;
+    height: 80px;
+    margin-right: 47px;
+  }
 }
 
 .navigation__button {
@@ -28,6 +39,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }
 
 .navigation__button::before {
@@ -44,8 +59,13 @@
 }
 
 .navigation__links-list {
-  display: none;
   position: absolute;
   top: 60px;
-  width: 100%;
+  display: none;
+
+  @media (min-width: variables.$tablet-width) {
+    position: static;
+    display: flex;
+    margin-right: auto;
+  }
 }
