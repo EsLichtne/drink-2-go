@@ -1,0 +1,9 @@
+@use "../global/variables.scss";
+
+.page__body {
+  width: variables.$mobile-width;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0 auto;
+}
