@@ -1,20 +1,39 @@
 @use "./global/variables.scss";
 
 .advantage {
+  display: grid;
+  justify-items: center;
+
   &::before {
     content: "";
-    display: block;
     width: 52px;
     height: 56px;
-    margin: 0 auto 10px;
+    margin-bottom: 10px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 52px 1fr;
+    column-gap: 20px;
+    row-gap: 10px;
+    justify-items: start;
+    text-align: left;
+
+    &::before {
+      grid-column: 1 / 2;
+      grid-row: span 2;
+    }
   }
 }
 
 .advantage--speed::before {
   background-image: url("../../images/icons/stack.svg#speed");
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 4px;
+  }
 }
 
 .advantage--comfort::before {
@@ -27,6 +46,10 @@
 
 .advantage--eco-friendliness::before {
   background-image: url("../../images/icons/stack.svg#eco-friendliness");
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 4px;
+  }
 }
 
 .advantage__title {
@@ -34,8 +57,19 @@
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
-.advantage__desctiption {
+.advantage__description {
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

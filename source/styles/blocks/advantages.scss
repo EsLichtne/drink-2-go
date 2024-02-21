@@ -5,6 +5,16 @@
   padding: 50px 0 60px;
   text-align: center;
   background-color: variables.$background-primary;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 60px 0 100px;
+  }
+}
+
+.advantages__wrapper {
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 10px;
+  }
 }
 
 .advantages__title {
@@ -15,10 +25,20 @@
 .advantages__capture {
   margin: 0;
   margin-bottom: 36px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .advantages__list {
   @include mixins.list-reset;
   display: grid;
   gap: 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+  }
 }
