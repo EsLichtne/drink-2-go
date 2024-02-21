@@ -1,8 +1,6 @@
 @use "./global/variables.scss";
 @use "./global/mixins.scss";
 
-// .social {}
-
 .social__list {
   @include mixins.list-reset;
   display: flex;
@@ -19,6 +17,7 @@
     height: 40px;
     background-color: variables.$text-disabled;
     background-size: contain;
+    transition: background-color 0.3s linear;
   }
 }
 
@@ -32,4 +31,13 @@
 
 .social__link--ok::before {
   mask-image: url("../../images/icons/stack.svg#ok");
+}
+
+.social__link:hover::before,
+.social__link:focus::before {
+  background-color: variables.$color-primary;
+}
+
+.social__link:active::before{
+  background-color: variables.$color-primary-darker;
 }
