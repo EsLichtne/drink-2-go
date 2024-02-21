@@ -1,0 +1,41 @@
+@use "./global/variables.scss";
+
+.advantage {
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.advantage--speed::before {
+  background-image: url("../../images/icons/stack.svg#speed");
+}
+
+.advantage--comfort::before {
+  background-image: url("../../images/icons/stack.svg#comfort");
+}
+
+.advantage--liveliness::before {
+  background-image: url("../../images/icons/stack.svg#liveliness");
+}
+
+.advantage--eco-friendliness::before {
+  background-image: url("../../images/icons/stack.svg#eco-friendliness");
+}
+
+.advantage__title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.advantage__desctiption {
+  margin: 0;
+}

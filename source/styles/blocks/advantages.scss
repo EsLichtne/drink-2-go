@@ -19,4 +19,6 @@
 
 .advantages__list {
   @include mixins.list-reset;
+  display: grid;
+  gap: 32px;
 }
