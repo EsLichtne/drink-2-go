@@ -1,0 +1,14 @@
+@use "./global/variables.scss";
+
+.price {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  text-decoration: none;
+
+  &--old {
+    font-size: 16px;
+    line-height: 32px;
+    color: variables.$text-accent;
+  }
+}
