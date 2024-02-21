@@ -4,5 +4,9 @@
   font-size: 24px;
   line-height: 36px;
   font-weight: 700;
-  text-wrap: balance;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
 }
