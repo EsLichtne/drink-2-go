@@ -3,20 +3,74 @@
 
 .footer {
   background-color: variables.$background-primary;
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 40px;
+  }
+}
+
+.footer__container {
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    gap: 30px;
+  }
 }
 
 .footer__header {
   display: flex;
   padding: 22px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 42px 32px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 .footer__logo {
+  width: 82px;
+  height: 36px;
   margin-right: auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 170px;
+    height: 36px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .footer__logo-image {
   width: 82px;
   height: 36px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 170px;
+    height: 36px;
+  }
+}
+
+.footer__capture {
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.footer__navigation {
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+  }
 }
 
 .footer__section-wrapper {
@@ -29,6 +83,10 @@
   font-size: 14px;
   line-height: 20px;
   color: variables.$text-accent;
+
+  &--contacts {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__list {
@@ -46,4 +104,58 @@
   text-transform: uppercase;
   text-decoration: none;
   color: variables.$text-primary;
+  transition: color 0.3s linear;
+
+  &:hover,
+  &:focus {
+    color: variables.$color-primary-lighter;
+  }
+
+  &:active {
+    color: variables.$color-primary-darker;
+  }
+}
+
+.footer__icon {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+
+  &::before {
+    content: "";
+    width: 13px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.footer__address {
+  font-style: normal;
+
+  &::before {
+    background-image: url("../../images/icons/stack.svg#pin");
+  }
+}
+
+.footer__telephone {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+
+  &::before {
+    background-image: url("../../images/icons/stack.svg#phone");
+  }
+}
+
+.footer__copyright {
+  @media (min-width: variables.$tablet-width) {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-column: 1 / -1;
+  }
 }
