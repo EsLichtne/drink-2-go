@@ -45,14 +45,10 @@
 }
 
 .navigation__capture {
-  max-width: 150px;
-  margin: 0;
-  margin-right: 138px;
-  font-size: 12px;
-  line-height: 16px;
-
-  @media (max-width: 1439px) {
-    display: none;
+  @media (min-width: variables.$desktop-width) {
+    max-width: 150px;
+    margin: 0;
+    margin-right: 138px;
   }
 }
 
