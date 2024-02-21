@@ -1,0 +1,25 @@
+@use "./global/variables.scss";
+@use "./global/mixins.scss";
+
+.pagination {
+  @include mixins.list-reset;
+  display: flex;
+  gap: 8px;
+
+  @media (max-width: 1439px) {
+    display: none;
+  }
+}
+
+.pagination__button {
+  width: 62px;
+  height: 4px;
+  padding: 0;
+  border: none;
+  background-color: variables.$color-light;
+  cursor: pointer;
+
+  &--current {
+    background-color: variables.$color-primary;
+  }
+}
