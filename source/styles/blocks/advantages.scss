@@ -16,3 +16,7 @@
   margin: 0;
   margin-bottom: 36px;
 }
+
+.advantages__list {
+  @include mixins.list-reset;
+}
