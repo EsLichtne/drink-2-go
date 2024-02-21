@@ -61,7 +61,20 @@
       <h2 class="visually-hidden">Слайдер с различными видами кофе.</h2>
       <div class="slider container">
         <h3 class="slider__title">Декаф Флэт Уайт</h3>
-        <img class="slider__image" src="images/hero-1-mobile@1x.png" alt="Декаф Флэт Уайт." width="280" height="280">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="images/hero-1-desktop@1x.webp 1x, images/hero-1-desktop@2x.webp 2x" width="600" height="600">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="images/hero-1-tablet@1x.webp 1x, images/hero-1-tablet@2x.webp 2x" width="476" height="476">
+          <source type="image/webp" srcset="images/hero-1-mobile@1x.webp 1x, images/hero-1-mobile@2x.webp 2x"
+            width="280" height="280">
+          <source media="(min-width: 1440px)" srcset="images/hero-1-desktop@1x.png 1x, images/hero-1-desktop@2x.png 2x"
+            width="600" height="600">
+          <source media="(min-width: 768px)" srcset="images/hero-1-tablet@1x.png 1x, images/hero-1-tablet@2x.png 2x"
+            width="476" height="476">
+          <img class="slider__image" src="images/hero-1-mobile@1x.png" srcset="images/hero-1-mobile@2x.png 2x"
+            alt="Декаф Флэт Уайт." width="280" height="280">
+        </picture>
         <p class="slider__capture">Новинка!</p>
         <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
           что нужно для расслабления после тяжёлого рабочего дня</p>
