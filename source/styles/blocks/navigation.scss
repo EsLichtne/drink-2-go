@@ -1,7 +1,6 @@
 @use "./global/variables.scss";
 
 .navigation {
-  position: relative;
   display: flex;
   align-items: center;
   width: variables.$mobile-width;
@@ -23,8 +22,12 @@
 }
 
 .navigation--open .navigation__links-list {
-  display: grid;
-  z-index: 1;
+  @media (max-width: 767px) {
+    left: 0;
+    display: grid;
+    width: 100%;
+    z-index: 1;
+  }
 }
 
 .navigation__logo {
@@ -86,7 +89,12 @@
     background-size: contain;
   }
 
+  &:hover::before {
+    background-color: variables.$text-accent;
+  }
+
   &:active {
     background-color: variables.$color-secondary;
+    color: variables.$text-primary;
   }
 }

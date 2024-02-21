@@ -1,5 +1,6 @@
 @use "./global/variables.scss";
 
 .header {
+  position: relative;
   background-color: variables.$background-primary;
 }
