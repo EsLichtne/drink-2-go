@@ -64,12 +64,6 @@
     padding: 32px 21px;
   }
 
-  &--current {
-    @media (min-width: variables.$tablet-width) {
-      color: variables.$color-primary;
-    }
-  }
-
   &:hover,
   &:focus {
     color: variables.$text-accent;
@@ -80,6 +74,27 @@
     background-color: variables.$color-secondary;
 
     @media (min-width: variables.$tablet-width) {
+      color: variables.$text-accent;
+    }
+  }
+}
+
+.links-list__link--current {
+  cursor: default;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: variables.$text-primary;
+    background-color: transparent;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    color: variables.$text-accent;
+
+    &:hover,
+    &:focus,
+    &:active {
       color: variables.$text-accent;
     }
   }
