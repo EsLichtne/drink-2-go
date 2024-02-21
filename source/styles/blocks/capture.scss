@@ -1,0 +1,8 @@
+.capture {
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (max-width: 1439px) {
+    display: none;
+  }
+}
