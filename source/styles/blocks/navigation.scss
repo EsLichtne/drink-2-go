@@ -71,6 +71,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s linear;
 
   @media (min-width: variables.$tablet-width) {
     display: none;
