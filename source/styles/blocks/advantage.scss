@@ -14,7 +14,7 @@
     background-size: contain;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$tablet-width) and (max-width: 1439px) {
     grid-template-columns: 52px 1fr;
     column-gap: 20px;
     row-gap: 10px;
@@ -26,12 +26,18 @@
       grid-row: span 2;
     }
   }
+
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      margin-bottom: 21px;
+    }
+  }
 }
 
 .advantage--speed::before {
   background-image: url("../../images/icons/stack.svg#speed");
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$tablet-width) and (max-width: 1439px) {
     margin-top: 4px;
   }
 }
@@ -47,7 +53,7 @@
 .advantage--eco-friendliness::before {
   background-image: url("../../images/icons/stack.svg#eco-friendliness");
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$tablet-width) and (max-width: 1439px) {
     margin-top: 4px;
   }
 }
@@ -62,6 +68,10 @@
     margin: 0;
     font-size: 24px;
     line-height: 36px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 10px;
   }
 }
 
