@@ -2,4 +2,8 @@
 
 .hero {
   background-color: #f3ebe1;
+
+  @media (min-width: variables.$tablet-width) {
+    background-image: linear-gradient(#f3ebe1 640px, #ffffff 640px);
+  }
 }
