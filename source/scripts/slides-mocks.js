@@ -14,7 +14,7 @@ export const slides = [
     <source media="(min-width: 768px)" srcset="images/hero-1-tablet@1x.png 1x, images/hero-1-tablet@2x.png 2x"
       width="476" height="476">
     <img class="slider__image" src="images/hero-1-mobile@1x.png" srcset="images/hero-1-mobile@2x.png 2x"
-      alt="Декаф Флэт Уайт." width="280" height="280">
+      alt="" width="280" height="280">
   </picture>`
     ,
     description: 'Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня',
@@ -37,7 +37,7 @@ export const slides = [
   <source media="(min-width: 768px)" srcset="images/hero-2-tablet@1x.png 1x, images/hero-2-tablet@2x.png 2x"
     width="476" height="476">
   <img class="slider__image" src="images/hero-2-mobile@1x.png" srcset="images/hero-2-mobile@2x.png 2x"
-    alt="Декаф Флэт Уайт." width="280" height="280">
+    alt="" width="280" height="280">
 </picture>`
     ,
     description: 'Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор',
@@ -60,7 +60,7 @@ export const slides = [
   <source media="(min-width: 768px)" srcset="images/hero-3-tablet@1x.png 1x, images/hero-3-tablet@2x.png 2x"
     width="476" height="476">
   <img class="slider__image" src="images/hero-3-mobile@1x.png" srcset="images/hero-3-mobile@2x.png 2x"
-    alt="Декаф Флэт Уайт." width="280" height="280">
+    alt="" width="280" height="280">
 </picture>`
     ,
     description: 'Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость',
