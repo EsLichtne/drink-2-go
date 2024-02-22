@@ -1,7 +1,7 @@
 @use "./global/variables.scss";
 @use "./global/mixins.scss";
 
-.pagination {
+.slider-pagination {
   @include mixins.list-reset;
   display: flex;
   gap: 8px;
@@ -11,7 +11,7 @@
   }
 }
 
-.pagination__button {
+.slider-pagination__button {
   width: 62px;
   height: 4px;
   padding: 0;
