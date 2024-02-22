@@ -1,0 +1,23 @@
+@use "./global/variables.scss";
+
+.radio {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  background-color: variables.$color-light;
+  border: 2px solid variables.$color-field;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border 0.3s linear, background-color 0.3s linear, box-shadow 0.3s linear;
+
+  &:checked {
+    background-color: variables.$color-primary;
+    border: 2px solid variables.$color-primary;
+    box-shadow: inset 0 0 0 2px variables.$color-light;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
