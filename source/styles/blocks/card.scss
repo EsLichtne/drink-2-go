@@ -6,19 +6,27 @@
   text-align: left;
 }
 
+.card__title-link {
+  color: variables.$text-primary;
+  text-decoration: none;
+}
+
 .card__title {
-  justify-self: start;
   margin: 0;
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 32px;
 }
 
-.card__image {
+.card__image-link {
   order: -1;
   width: 130px;
   height: 188px;
   margin: 0 auto 24px;
+}
+
+.card__image {
+  display: block;
 }
 
 .card__description {
