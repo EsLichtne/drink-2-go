@@ -1,0 +1,15 @@
+@use "./global/variables.scss";
+
+.catalog {
+  padding: 50px 0 44px;
+  text-align: center;
+  background-color: variables.$background-secondary;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 5px;
+}
+.catalog__subtitle {
+  margin: 0;
+}
