@@ -14,10 +14,6 @@
   cursor: pointer;
   transition: background-color 0.3s linear;
 
-  &--primary {
-    background-color: variables.$color-primary;
-  }
-
   &:hover,
   &:focus {
     background-color: variables.$color-primary-lighter;
@@ -30,5 +26,24 @@
   &:disabled {
     background-color: variables.$color-disabled;
     cursor: not-allowed;
+  }
+}
+
+.button--primary {
+  background-color: variables.$color-primary;
+}
+
+.button--secondary {
+  color: variables.$color-primary;
+  background-color: variables.$color-light;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: variables.$text-secondary;
+  }
+
+  &:disabled {
+    background-color: variables.$color-disabled;
   }
 }
