@@ -160,18 +160,6 @@
     background-size: contain;
   }
 
-  &--back {
-    left: -20px;
-  }
-
-  &--forward {
-    right: -20px;
-  }
-
-  &--forward::before {
-    transform: rotate(180deg);
-  }
-
   &:disabled::before {
     background-color: variables.$text-disabled;
   }
@@ -189,8 +177,9 @@
 }
 
 .slider__button--back {
-  @media (min-width: variables.$tablet-width) {
+  left: -20px;
 
+  @media (min-width: variables.$tablet-width) {
     &:hover,
     &:focus {
       background-image: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
@@ -207,8 +196,13 @@
 }
 
 .slider__button--forward {
-  @media (min-width: variables.$tablet-width) {
+  right: -20px;
 
+  &::before {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: variables.$tablet-width) {
     &:hover,
     &:focus {
       background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
