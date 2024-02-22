@@ -1,0 +1,48 @@
+@use "./global/variables.scss";
+@use "./global/mixins.scss";
+
+.catalog-pagination {
+  @include mixins.list-reset;
+  display: flex;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+.catalog-pagination__button {
+  display: grid;
+  place-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: variables.$text-accent;
+  background-color: variables.$color-light;
+
+  &--current {
+    font-weight: 600;
+    color: variables.$text-primary;
+    background-color: transparent;
+    cursor: default;
+  }
+
+  &--special::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    mask-image: url("../../images/icons/stack.svg#tick");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: variables.$text-accent;
+  }
+
+  &--back::before {
+    transform: rotate(90deg);
+  }
+
+  &--forward::before {
+    transform: rotate(-90deg);
+  }
+}
