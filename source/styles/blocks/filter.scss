@@ -1,0 +1,75 @@
+@use "./global/variables.scss";
+@use "./global/mixins.scss";
+
+.filter {
+  display: grid;
+  gap: 30px;
+  padding: 20px 0 44px;
+}
+
+.filter__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+
+.filter__legend {
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.filter__range {
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.filter__fields-wrapper {
+  display: grid;
+  grid-template-columns: 118px 1fr 118px;
+}
+
+.filter__dash {
+  width: 8px;
+  height: 2px;
+  margin: auto;
+  background-color: variables.$text-disabled;
+}
+
+.filter__list {
+  @include mixins.list-reset;
+  display: grid;
+  gap: 20px;
+}
+
+.filter__field-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.filter__field-wrapper:has(.filter__radio:disabled) {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.filter__field-wrapper:has(.filter__switch:disabled) {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.filter__label {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filter__buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 0;
+}
