@@ -9,16 +9,16 @@ const oldPrice = slider.querySelector('.price--old');
 const price = slider.querySelector('.price--new');
 const backButton = slider.querySelector('.slider__button--back');
 const forwardButton = slider.querySelector('.slider__button--forward');
-const paginationButtons = slider.querySelectorAll('.pagination__button');
+const paginationButtons = slider.querySelectorAll('.slider-pagination__button');
 
 let currentSlideIndex = 0;
 
 const updatePaginationButtons = () => {
   paginationButtons.forEach((button, index) => {
     if (index === currentSlideIndex) {
-      button.classList.add('pagination__button--current');
+      button.classList.add('slider-pagination__button--current');
     } else {
-      button.classList.remove('pagination__button--current');
+      button.classList.remove('slider-pagination__button--current');
     }
   });
 };
