@@ -4,6 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: variables.$tablet-width) {
+    justify-content: flex-end;
+    gap: 10px;
+  }
 }
 
 .sorting__text {

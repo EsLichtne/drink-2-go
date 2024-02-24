@@ -17,6 +17,12 @@
     background-position: center;
     background-size: contain;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    &::after {
+      left: 49.5%;
+    }
+  }
 }
 
 .location__map {

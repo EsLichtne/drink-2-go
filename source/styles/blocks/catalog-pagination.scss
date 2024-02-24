@@ -6,6 +6,11 @@
   display: flex;
   gap: 20px;
   padding-top: 40px;
+
+  @media (min-width: variables.$tablet-width) {
+    justify-content: end;
+    padding-top: 70px;
+  }
 }
 
 .catalog-pagination__button {
@@ -44,5 +49,29 @@
 
   &--forward::before {
     transform: rotate(-90deg);
+  }
+}
+
+.catalog-pagination__button--special::before {
+  @media (min-width: variables.$tablet-width) {
+    content: "Назад";
+    width: auto;
+    height: auto;
+    padding: 0 12px;
+    mask: none;
+    background-color: transparent;
+    transform: none;
+  }
+}
+
+.catalog-pagination__button--back::before {
+  @media (min-width: variables.$tablet-width) {
+    content: "Назад";
+  }
+}
+
+.catalog-pagination__button--forward::before {
+  @media (min-width: variables.$tablet-width) {
+    content: "Вперёд";
   }
 }

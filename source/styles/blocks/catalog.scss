@@ -4,6 +4,10 @@
   padding: 50px 0 44px;
   text-align: center;
   background-color: variables.$background-secondary;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 80px 0 89px;
+  }
 }
 
 .catalog__title {
@@ -13,10 +17,19 @@
 
 .catalog__subtitle {
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .catalog__sorting {
   margin-left: 3px;
   margin-right: -3px;
   margin-bottom: 16px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+    margin-bottom: 26px;
+  }
 }

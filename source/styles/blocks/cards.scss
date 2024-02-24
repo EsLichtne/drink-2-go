@@ -5,4 +5,9 @@
   @include mixins.list-reset;
   display: grid;
   gap: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }

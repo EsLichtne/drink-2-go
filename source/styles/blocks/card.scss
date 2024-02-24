@@ -10,6 +10,10 @@
   &:hover {
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 50px 30px 30px;
+  }
 }
 
 .card:has(:is(.card__title-link:focus, .card__image-link:focus, .card__button:focus)) {
@@ -17,15 +21,24 @@
 }
 
 .card__title-link {
+  margin-bottom: 4px;
   color: variables.$text-primary;
   text-decoration: none;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .card__title {
   margin: 0;
-  margin-bottom: 4px;
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .card__image-link {
@@ -33,6 +46,10 @@
   width: 130px;
   height: 188px;
   margin: 0 auto 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .card__image {
@@ -42,6 +59,10 @@
 .card__description {
   margin: 0;
   margin-bottom: 16px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .card__footer {
