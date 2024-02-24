@@ -23,27 +23,36 @@
     background-color: variables.$color-primary-darker;
   }
 
-  &:disabled {
+  &--primary {
+    background-color: variables.$color-primary;
+  }
+
+  &--secondary {
+    color: variables.$color-primary;
+    background-color: variables.$color-light;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: variables.$text-secondary;
+    }
+
+    &:disabled,
+    &--disabled {
+      background-color: variables.$color-disabled;
+      color: variables.$text-secondary;
+    }
+  }
+
+  &:disabled,
+  &--disabled {
     background-color: variables.$color-disabled;
     cursor: not-allowed;
-  }
-}
 
-.button--primary {
-  background-color: variables.$color-primary;
-}
-
-.button--secondary {
-  color: variables.$color-primary;
-  background-color: variables.$color-light;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: variables.$text-secondary;
-  }
-
-  &:disabled {
-    background-color: variables.$color-disabled;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: variables.$color-disabled;
+    }
   }
 }

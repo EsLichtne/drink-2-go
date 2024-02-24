@@ -10,6 +10,7 @@
 .social__link {
   display: grid;
   place-content: center;
+  transition: background-color 0.3s linear;
 
   &::before {
     content: "";
@@ -33,11 +34,20 @@
   mask-image: url("../../images/icons/stack.svg#ok");
 }
 
-.social__link:hover::before,
-.social__link:focus::before {
-  background-color: variables.$color-primary;
+.social__link:hover,
+.social__link:focus {
+  background-color: variables.$color-secondary;
+
+  &::before,
+  &::before {
+    background-color: variables.$color-primary;
+  }
 }
 
-.social__link:active::before {
-  background-color: variables.$color-primary-darker;
+.social__link:active {
+  background-color: variables.$color-primary-opacity;
+
+  &::before {
+    background-color: variables.$color-primary-darker;
+  }
 }

@@ -6,8 +6,8 @@
   width: 42px;
   height: 24px;
   margin: 0;
-  padding: 2px;
   background-color: variables.$color-field;
+  border: 2px solid variables.$color-field;
   border-radius: 12px;
   transition: background-color 0.3s linear;
 
@@ -23,6 +23,21 @@
 .switch:has(.switch__input:checked) {
   justify-items: end;
   background-color: variables.$color-primary;
+  border-color: variables.$color-primary;
+}
+
+.switch:has(.switch__input:disabled:checked) {
+  background-color: variables.$color-disabled;
+  border-color: variables.$color-disabled;
+
+  &::before {
+    background-color: variables.$text-disabled;
+  }
+}
+
+.switch:has(.switch__input:focus) {
+  background-color: variables.$color-primary-opacity;
+  border: 2px solid variables.$color-primary-lighter;
 }
 
 .switch__input {

@@ -28,13 +28,8 @@
   text-decoration: none;
   color: variables.$text-accent;
   background-color: variables.$color-light;
-
-  &--current {
-    font-weight: 600;
-    color: variables.$text-primary;
-    background-color: transparent;
-    cursor: default;
-  }
+  border-radius: 4px;
+  transition: background-color 0.3s linear, color 0.3s linear;
 
   &--special::before {
     content: "";
@@ -54,11 +49,64 @@
   &--forward::before {
     transform: rotate(-90deg);
   }
+
+  &:hover,
+  &:focus {
+    color: variables.$text-secondary;
+    background-color: variables.$color-primary-lighter;
+
+    &::before {
+      background-color: variables.$text-secondary;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      &::before {
+        background-color: variables.$color-primary-lighter;
+      }
+    }
+  }
+
+  &:active {
+    background-color: variables.$color-primary-darker;
+
+    &::before {
+      background-color: variables.$text-secondary;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      &::before {
+        background-color: variables.$color-primary-darker;
+      }
+    }
+  }
+
+  &:disabled,
+  &--disabled {
+    color: variables.$text-secondary;
+    background-color: variables.$color-disabled;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: variables.$color-disabled;
+    }
+
+    &::before {
+      background-color: variables.$text-secondary;
+    }
+  }
+
+  &--current {
+    font-weight: 600;
+    color: variables.$text-primary;
+    background-color: transparent;
+    pointer-events: none;
+  }
 }
 
 .catalog-pagination__button--special::before {
   @media (min-width: variables.$tablet-width) {
-    content: "Назад";
     width: auto;
     height: auto;
     padding: 0 12px;

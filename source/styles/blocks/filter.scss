@@ -82,14 +82,24 @@
   cursor: pointer;
 }
 
+.filter__field-wrapper:hover .filter__switch-wrapper {
+  background-color: variables.$color-primary-opacity;
+  border: 2px solid variables.$color-primary-lighter;
+}
+
 .filter__field-wrapper:has(.filter__radio:disabled) {
   opacity: 0.3;
-  cursor: default;
+  pointer-events: none;
 }
 
 .filter__field-wrapper:has(.filter__switch:disabled) {
   opacity: 0.3;
-  cursor: default;
+  pointer-events: none;
+}
+
+.filter__field-wrapper:has(.filter__switch:checked:disabled) {
+  opacity: 1;
+  pointer-events: none;
 }
 
 .filter__label {

@@ -7,7 +7,6 @@
   padding: 20px 37px 30px;
   text-decoration: none;
   color: variables.$text-disabled;
-  transition: color 0.3s linear;
 
   @media (min-width: variables.$tablet-width) {
     padding-top: 30px;
@@ -17,16 +16,17 @@
   @media (min-width: variables.$desktop-width) {
     padding-top: 20px;
   }
-
-  &:hover,
-  &:focus {
-    color: variables.$text-accent;
-  }
-
-  &:active {
-    color: variables.$color-primary-darker;
-  }
 }
+
+.copyright:hover :is(.copyright__link, .copyright__icon),
+.copyright:focus :is(.copyright__link, .copyright__icon) {
+  color: variables.$text-accent;
+}
+
+.copyright:active :is(.copyright__link, .copyright__icon) {
+  color: variables.$color-primary-darker;
+}
+
 
 .copyright__text {
   font-size: 12px;
@@ -36,4 +36,9 @@
 .copyright__icon {
   width: 12px;
   height: 16px;
+  transition: color 0.3s linear;
+}
+
+.copyright__link {
+  transition: color 0.3s linear;
 }

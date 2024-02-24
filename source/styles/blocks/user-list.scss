@@ -56,8 +56,10 @@
   color: variables.$text-accent;
 }
 
-.user-list__link:hover::before {
+.user-list__link:hover::before,
+.user-list__link:focus::before {
   background-color: variables.$text-accent;
+  color: variables.$text-accent;
 }
 
 .user-list__link:active {

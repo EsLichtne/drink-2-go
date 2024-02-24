@@ -10,8 +10,20 @@
   color: variables.$text-primary;
   border: 2px solid variables.$color-primary-lighter;
   border-radius: 4px;
+  transition: border 0.3s linear;
 
   &::placeholder {
     color: variables.$text-disabled;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: variables.$color-primary-darker;
+  }
+
+  &:disabled {
+    color: variables.$text-disabled;
+    background-color: variables.$background-secondary;
+    border-color: variables.$color-disabled;
   }
 }
