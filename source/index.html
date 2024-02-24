@@ -37,7 +37,7 @@
       <p class="navigation__capture capture">Интернет-магазин кофейных напитков</p>
       <ul class="navigation__links-list links-list">
         <li class="links-list__item">
-          <a class="links-list__link links-list__link--current" href="#">Главная</a>
+          <a class="links-list__link links-list__link--current" href="#" aria-current="page">Главная</a>
         </li>
         <li class="links-list__item">
           <a class="links-list__link" href="#">Каталог</a>
@@ -162,7 +162,7 @@
               <label class="visually-hidden" for="min-price">Минимальная цена.</label>
               <input class="filter__range-input filter__range-input--min field" type="number" name="min-price"
                 id="min-price" placeholder="0" min="0">
-              <span class="filter__dash"></span>
+              <span class="filter__dash" aria-hidden="true"></span>
               <label class="visually-hidden" for="max-price">Максимальная цена.</label>
               <input class="filter__range-input filter__range-input--max field" type="number" name="max-price"
                 id="max-price" placeholder="900" min="0" value="900">
@@ -502,7 +502,7 @@
       <a class="footer__copyright copyright" href="#" aria-label="Сайт HTML Academy." target="_blank"
         rel="noreferrer noopener">
         <span class="copyright__text">Разработано в HTML Academy</span>
-        <svg class="copyright__icon" width="12" height="16">
+        <svg class="copyright__icon" width="12" height="16" aria-hidden="true">
           <use href="images/icons/stack.svg#html-academy"></use>
         </svg>
       </a>
