@@ -19,7 +19,7 @@
 
 .footer__header {
   display: flex;
-  padding: 22px 0;
+  padding: 20px 0;
 
   @media (min-width: variables.$tablet-width) {
     padding: 42px 32px;
@@ -35,6 +35,7 @@
   width: 82px;
   height: 36px;
   margin-right: auto;
+  padding: 2px 0;
 
   @media (min-width: variables.$tablet-width) {
     width: 170px;
@@ -82,6 +83,7 @@
   margin-bottom: 12px;
   font-size: 14px;
   line-height: 20px;
+  letter-spacing: 0.02em;
   color: variables.$text-accent;
 
   &--contacts {
@@ -101,6 +103,7 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   text-decoration: none;
   color: variables.$text-primary;
@@ -116,10 +119,19 @@
   }
 }
 
+.footer__contacts {
+  padding: 22px 0;
+}
+
+.footer__contacts .footer__list {
+  gap: 10px;
+}
+
 .footer__icon {
   display: flex;
   gap: 6px;
   align-items: flex-start;
+  padding: 2px 0;
 
   &::before {
     content: "";
@@ -143,6 +155,7 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+  letter-spacing: 0;
 
   &::before {
     background-image: url("../../images/icons/stack.svg#phone");
