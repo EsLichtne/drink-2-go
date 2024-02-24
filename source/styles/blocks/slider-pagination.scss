@@ -22,4 +22,11 @@
   &--current {
     background-color: variables.$color-primary;
   }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: variables.$color-primary-opacity;
+    outline: none;
+  }
 }
