@@ -28,6 +28,10 @@
 .advantages__title {
   margin: 0;
   margin-bottom: 4px;
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 3px;
+  }
 }
 
 .advantages__subtitle {
