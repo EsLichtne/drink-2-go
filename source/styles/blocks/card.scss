@@ -5,6 +5,15 @@
   padding: 40px 20px 20px;
   text-align: left;
   background-color: variables.$color-light;
+  transition: box-shadow 0.3s linear;
+
+  &:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+.card:has(:is(.card__title-link:focus, .card__image-link:focus, .card__button:focus)) {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .card__title-link {
