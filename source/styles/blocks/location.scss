@@ -1,0 +1,25 @@
+@use "./global/variables.scss";
+
+.location__map-wrapper {
+  position: relative;
+  max-width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 50px;
+    background-image: url("../../images/icons/stack.svg#map-pin");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.location__map {
+  display: block;
+  width: 100%;
+}
