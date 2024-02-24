@@ -11,6 +11,10 @@
     justify-content: end;
     padding-top: 70px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 60px;
+  }
 }
 
 .catalog-pagination__button {

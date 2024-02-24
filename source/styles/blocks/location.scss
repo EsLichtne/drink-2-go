@@ -23,6 +23,12 @@
       left: 49.5%;
     }
   }
+
+  @media (min-width: variables.$desktop-width) {
+    &::after {
+      left: 49.7%;
+    }
+  }
 }
 
 .location__map {

@@ -10,4 +10,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

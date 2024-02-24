@@ -6,12 +6,17 @@
   gap: 30px;
   padding: 20px 0 40px;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$tablet-width) and (max-width: 1439px) {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     row-gap: 40px;
     padding: 0;
     padding-bottom: 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0;
+    padding-top: 5px;
   }
 }
 
@@ -38,6 +43,10 @@
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 31px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 33px;
+  }
 }
 
 .filter__fields-wrapper {
@@ -46,6 +55,10 @@
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: 87px 1fr 87px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 134px 1fr 134px;
   }
 }
 
@@ -95,5 +108,16 @@
     flex-direction: row;
     justify-content: center;
     column-gap: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+}
+
+.filter__button {
+  @media (min-width: variables.$desktop-width) {
+    width: 100%;
   }
 }
