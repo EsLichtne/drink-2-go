@@ -9,17 +9,15 @@ const oldPrice = slider.querySelector('.price--old');
 const price = slider.querySelector('.price--new');
 const backButton = slider.querySelector('.slider__button--back');
 const forwardButton = slider.querySelector('.slider__button--forward');
-const paginationButtons = slider.querySelectorAll('.slider-pagination__button');
+const pagination = slider.querySelector('.slider__pagination');
 
 let currentSlideIndex = 0;
 
 const updatePaginationButtons = () => {
+  const paginationButtons = pagination.querySelectorAll('.slider-pagination__button');
+
   paginationButtons.forEach((button, index) => {
-    if (index === currentSlideIndex) {
-      button.classList.add('slider-pagination__button--current');
-    } else {
-      button.classList.remove('slider-pagination__button--current');
-    }
+    button.classList.toggle('slider-pagination__button--current', index === currentSlideIndex);
   });
 };
 
@@ -34,30 +32,62 @@ const updateSlideContent = (index) => {
   price.textContent = slide.price;
 };
 
-const getNextSlide = () => {
-  currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+const updateButtonState = () => {
+  backButton.disabled = currentSlideIndex === 0;
+  forwardButton.disabled = currentSlideIndex === slides.length - 1;
+};
+
+const updateSlide = (index) => {
+  currentSlideIndex = index;
   updateSlideContent(currentSlideIndex);
   updatePaginationButtons();
+  updateButtonState();
+};
+
+const createPaginationButtons = () => {
+  pagination.innerHTML = '';
+
+  slides.forEach((slide, index) => {
+    const paginationItem = document.createElement('li');
+    paginationItem.classList.add('slider-pagination__item');
+
+    const button = document.createElement('button');
+    button.classList.add('slider-pagination__button');
+    button.type = 'button';
+    button.innerHTML = `<span class='visually-hidden'>${index + 1} слайд.</span>`;
+
+    button.addEventListener('click', () => {
+      updateSlide(index);
+    });
+
+    paginationItem.appendChild(button);
+    pagination.appendChild(paginationItem);
+  });
+
+  updatePaginationButtons();
+};
+
+const getNextSlide = () => {
+  if (currentSlideIndex < slides.length - 1) {
+    updateSlide(currentSlideIndex + 1);
+  }
 };
 
 const getPreviousSlide = () => {
-  currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-  updateSlideContent(currentSlideIndex);
-  updatePaginationButtons();
+  if (currentSlideIndex > 0) {
+    updateSlide(currentSlideIndex - 1);
+  }
 };
 
 backButton.addEventListener('click', () => {
+  forwardButton.disabled = false;
   getPreviousSlide();
 });
 
 forwardButton.addEventListener('click', () => {
+  backButton.disabled = false;
   getNextSlide();
 });
 
-paginationButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    currentSlideIndex = index;
-    updateSlideContent(currentSlideIndex);
-    updatePaginationButtons();
-  });
-});
+createPaginationButtons();
+updateButtonState();
