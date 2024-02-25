@@ -4,6 +4,7 @@
 .slider-pagination {
   @include mixins.list-reset;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 
   @media (max-width: 1439px) {
