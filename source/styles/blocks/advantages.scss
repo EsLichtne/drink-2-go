@@ -29,6 +29,10 @@
   margin: 0;
   margin-bottom: 5px;
 
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 4px;
+  }
+
   @media (min-width: variables.$desktop-width) {
     margin-bottom: 3px;
   }
