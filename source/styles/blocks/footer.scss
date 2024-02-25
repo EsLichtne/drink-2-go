@@ -19,7 +19,7 @@
 
 .footer__header {
   display: flex;
-  padding: 20px 0;
+  padding: 20px 0 21px;
 
   @media (min-width: variables.$tablet-width) {
     padding: 40px 0 30px;
@@ -76,7 +76,7 @@
 }
 
 .footer__section-wrapper {
-  padding: 20px 0;
+  padding: 20px 0 21px;
 
   @media (min-width: variables.$tablet-width) {
     padding: 0;
@@ -129,7 +129,7 @@
 }
 
 .footer__contacts {
-  padding: 22px 0;
+  padding-bottom: 13px;
 
   @media (min-width: variables.$tablet-width) {
     padding: 0;
@@ -148,12 +148,11 @@
   display: flex;
   gap: 6px;
   align-items: flex-start;
-  padding: 2px 0;
 
   &::before {
     content: "";
     width: 13px;
-    height: 16px;
+    height: 20px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -181,6 +180,7 @@
 }
 
 .footer__telephone {
+  padding-top: 6px;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
