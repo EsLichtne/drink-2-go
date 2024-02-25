@@ -1,0 +1,118 @@
+@use "./global/variables.scss";
+
+.checkbox-set {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-set__radio {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  background-color: variables.$color-light;
+  border: 2px solid variables.$color-field;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border 0.3s linear, background-color 0.3s linear, box-shadow 0.3s linear;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$color-primary-opacity;
+    border: 2px solid variables.$color-primary;
+    box-shadow: inset 0 0 0 2px variables.$color-light;
+  }
+
+  &:checked {
+    background-color: variables.$color-primary;
+    border: 2px solid variables.$color-primary;
+    box-shadow: inset 0 0 0 2px variables.$color-light;
+
+    &:disabled {
+      background-color: variables.$color-disabled;
+      border: 2px solid variables.$color-disabled;
+      box-shadow: inset 0 0 0 2px variables.$color-light;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.checkbox-set:has(.checkbox-set__radio:disabled) {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.checkbox-set__switch {
+  position: relative;
+  display: grid;
+  width: 42px;
+  height: 24px;
+  margin: 0;
+  background-color: variables.$color-field;
+  border: 2px solid variables.$color-field;
+  border-radius: 12px;
+  transition: background-color 0.3s linear;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: variables.$color-light;
+    border-radius: 50%;
+  }
+}
+
+.checkbox-set__switch-input {
+  appearance: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.checkbox-set__switch:has(.checkbox-set__switch-input:checked) {
+  justify-items: end;
+  background-color: variables.$color-primary;
+  border-color: variables.$color-primary;
+}
+
+.checkbox-set__switch:has(.checkbox-set__switch-input:disabled:checked) {
+  background-color: variables.$color-disabled;
+  border-color: variables.$color-disabled;
+
+  &::before {
+    background-color: variables.$text-disabled;
+  }
+}
+
+.checkbox-set__switch:has(.checkbox-set__switch-input:focus) {
+  background-color: variables.$color-primary-opacity;
+  border: 2px solid variables.$color-primary-lighter;
+}
+
+.checkbox-set:hover .checkbox-set__switch {
+  background-color: variables.$color-primary-opacity;
+  border: 2px solid variables.$color-primary-lighter;
+}
+
+.checkbox-set:has(.checkbox-set__switch-input:disabled) {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.checkbox-set:has(.checkbox-set__switch-input:checked:disabled) {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.checkbox-set__label {
+  font-size: 16px;
+  line-height: 24px;
+}

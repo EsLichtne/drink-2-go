@@ -75,38 +75,6 @@
   gap: 20px;
 }
 
-.filter__field-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.filter__field-wrapper:hover .filter__switch-wrapper {
-  background-color: variables.$color-primary-opacity;
-  border: 2px solid variables.$color-primary-lighter;
-}
-
-.filter__field-wrapper:has(.filter__radio:disabled) {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.filter__field-wrapper:has(.filter__switch:disabled) {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.filter__field-wrapper:has(.filter__switch:checked:disabled) {
-  opacity: 1;
-  pointer-events: none;
-}
-
-.filter__label {
-  font-size: 16px;
-  line-height: 24px;
-}
-
 .filter__buttons {
   display: flex;
   flex-direction: column;
