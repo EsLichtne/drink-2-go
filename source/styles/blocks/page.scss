@@ -2,8 +2,26 @@
 
 .page__body {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   min-height: 100vh;
   margin: 0;
   scrollbar-gutter: stable;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-rows: auto 1fr auto;
+  }
+}
+
+.page__header {
+  @media (max-width: 767px) {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+}
+
+.page__content {
+  @media (max-width: 767px) {
+    padding-top: 60px;
+  }
 }
