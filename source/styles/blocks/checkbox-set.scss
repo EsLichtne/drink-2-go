@@ -7,6 +7,10 @@
   cursor: pointer;
 }
 
+.checkbox-set__field {
+  flex-shrink: 0;
+}
+
 .checkbox-set__radio {
   appearance: none;
   width: 24px;

@@ -46,8 +46,6 @@
 
 .slider__image-wrapper {
   grid-row: 1 / 2;
-  width: 280px;
-  height: 280px;
   margin-bottom: 10px;
 
   @media (min-width: variables.$tablet-width) {
@@ -68,6 +66,18 @@
 
 .slider__image {
   display: block;
+  width: 280px;
+  height: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
 }
 
 .slider__capture {
