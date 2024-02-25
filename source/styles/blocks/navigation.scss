@@ -1,17 +1,21 @@
 @use "./global/variables.scss";
 
 .navigation {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 72px 1fr 60px;
+  align-items: start;
+  grid-auto-flow: dense;
   width: variables.$mobile-width;
   margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 149px 1fr 120px;
     width: variables.$tablet-width;
     padding: 0 20px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 190px 289px 1fr 343px;
     width: variables.$desktop-width;
     padding: 0 40px;
   }
@@ -23,51 +27,66 @@
 
 .navigation--open .navigation__links-list {
   @media (max-width: 767px) {
-    left: 0;
     display: grid;
-    width: 100%;
-    z-index: 1;
   }
 }
 
 .navigation__logo {
+  grid-column: 1 / 2;
   width: 72px;
   height: 60px;
   margin-right: auto;
 
   @media (min-width: variables.$tablet-width) {
+    grid-column: 1 / 2;
     width: 102px;
     height: 80px;
-    margin-right: 47px;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 170px;
-    margin-right: 20px;
   }
 }
 
 .navigation__capture {
+  @media (max-width: 1439px) {
+    display: none;
+  }
+
   @media (min-width: variables.$desktop-width) {
+    grid-column: 2 / 3;
     max-width: 150px;
     margin: 0;
-    margin-right: 138px;
+    padding-top: 24px;
+  }
+}
+
+.navigation__user-list {
+  grid-column: 2 / 3;
+  justify-self: end;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: -1 / -2;
   }
 }
 
 .navigation__links-list {
-  position: absolute;
-  top: 60px;
   display: none;
+  grid-column: 1 / -1;
+  width: 100%;
 
   @media (min-width: variables.$tablet-width) {
-    position: static;
+    grid-column: 2 / 3;
     display: flex;
-    margin-right: auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-column: 3 / 4;
   }
 }
 
 .navigation__button {
+  grid-column: -1 / -2;
   display: grid;
   place-content: center;
   padding: 22px;
