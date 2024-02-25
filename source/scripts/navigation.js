@@ -1,6 +1,4 @@
 const TABLET_WIDTH = 768;
-
-
 const navigation = document.querySelector('.navigation');
 const button = navigation.querySelector('.navigation__button');
 const navigationClue = navigation.querySelector('.navigation__clue');
@@ -16,6 +14,12 @@ button.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
   if (window.innerWidth >= TABLET_WIDTH) {
+    navigation.classList.remove('navigation--open');
+  }
+});
+
+document.addEventListener('click', (event) => {
+  if (!navigation.contains(event.target)) {
     navigation.classList.remove('navigation--open');
   }
 });
