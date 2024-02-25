@@ -16,7 +16,7 @@
   }
 }
 
-.card:has(:is(.card__title-link:focus, .card__image-link:focus, .card__button:focus)) {
+.card:has(:is(.card__title-link:focus, .card__button:focus)) {
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -41,7 +41,7 @@
   }
 }
 
-.card__image-link {
+.card__image-wrapper {
   order: -1;
   width: 130px;
   height: 188px;
