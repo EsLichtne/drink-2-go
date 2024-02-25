@@ -14,9 +14,9 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    grid-template-columns: 662px 1fr;
+    grid-template-columns: 661px 1fr;
     grid-template-rows: repeat(3, min-content) 1fr min-content;
-    padding: 30px 34px 68px;
+    padding: 30px 34px 67px;
     text-align: left;
   }
 }

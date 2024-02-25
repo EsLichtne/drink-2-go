@@ -126,6 +126,10 @@
   @media (min-width: 768px) {
     right: -2px !important;
   }
+
+  @media (min-width: 1440px) {
+    right: -12px !important;
+  }
 }
 /* Styling;
  * Giving the connect element a border radius causes issues with using transform: scale
