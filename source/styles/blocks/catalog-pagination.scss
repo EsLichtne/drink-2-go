@@ -31,6 +31,12 @@
   border-radius: 4px;
   transition: background-color 0.3s linear, color 0.3s linear;
 
+  &--special {
+    @media (min-width: variables.$tablet-width) {
+      padding: 8px 12px;
+    }
+  }
+
   &--special::before {
     content: "";
     width: 10px;
@@ -42,29 +48,16 @@
     background-color: variables.$text-accent;
 
     @media (min-width: variables.$tablet-width) {
-      width: auto;
-      height: auto;
-      padding: 0 12px;
-      mask: none;
-      background-color: transparent;
-      transform: none;
+      display: none;
     }
   }
 
   &--back::before {
     transform: rotate(90deg);
-
-    @media (min-width: variables.$tablet-width) {
-      content: "Назад";
-    }
   }
 
   &--forward::before {
     transform: rotate(-90deg);
-
-    @media (min-width: variables.$tablet-width) {
-      content: "Вперёд";
-    }
   }
 
   &:hover,
@@ -75,12 +68,6 @@
     &::before {
       background-color: variables.$text-secondary;
     }
-
-    @media (min-width: variables.$tablet-width) {
-      &::before {
-        background-color: variables.$color-primary-lighter;
-      }
-    }
   }
 
   &:active {
@@ -88,12 +75,6 @@
 
     &::before {
       background-color: variables.$text-secondary;
-    }
-
-    @media (min-width: variables.$tablet-width) {
-      &::before {
-        background-color: variables.$color-primary-darker;
-      }
     }
   }
 
@@ -119,5 +100,11 @@
     color: variables.$text-primary;
     background-color: transparent;
     pointer-events: none;
+  }
+}
+
+.catalog-pagination__capture {
+  @media (max-width: 767px) {
+    display: none;
   }
 }
