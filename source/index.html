@@ -22,7 +22,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page__header header">
+  <header data-test="header" class="page__header header">
     <nav class="navigation">
       <a class="navigation__logo logo" href="#">
         <picture>
@@ -60,14 +60,14 @@
           </a>
         </li>
       </ul>
-      <button class="navigation__button" type="button">
+      <button class="js-toggle-button navigation__button" type="button">
         <span class="visually-hidden navigation__clue">Открыть меню.</span>
       </button>
     </nav>
   </header>
   <main class="page__content">
     <h1 class="visually-hidden">Drink2Go - магазин по продаже кофейных напитков.</h1>
-    <section class="hero">
+    <section data-test="hero" class="hero">
       <h2 class="visually-hidden">Слайдер с новинками кофейных напитков.</h2>
       <div class="slider container">
         <h3 class="slider__title">Декаф Флэт Уайт</h3>
@@ -98,10 +98,10 @@
           </span>
           <a class="slider__order-button button button--primary" href="#">Заказать</a>
         </p>
-        <button class="slider__button slider__button--back" type="button">
+        <button class="slider-button-prev slider__button slider__button--back" type="button">
           <span class="visually-hidden">Предыдущий слайд.</span>
         </button>
-        <button class="slider__button slider__button--forward" type="button">
+        <button class="slider-button-next slider__button slider__button--forward" type="button">
           <span class="visually-hidden">Следующий слайд.</span>
         </button>
         <ol class="slider__pagination slider-pagination">
@@ -113,7 +113,7 @@
         </ol>
       </div>
     </section>
-    <section class="advantages">
+    <section data-test="features" class="advantages">
       <div class="advantages__wrapper container">
         <h2 class="advantages__title title">Преимущества</h2>
         <p class="advantages__subtitle subtitle">Главные причины выбрать Drink2Go</p>
@@ -138,7 +138,7 @@
         </ul>
       </div>
     </section>
-    <section class="catalog">
+    <section data-test="catalog" class="catalog">
       <div class="catalog__wrapper container">
         <h2 class="catalog__title title">Каталог</h2>
         <p class="catalog__subtitle subtitle">Каталог кофейных напитков</p>
@@ -390,7 +390,7 @@
         </ul>
       </div>
     </section>
-    <section class="location">
+    <section data-test="map" class="location">
       <h2 class="visually-hidden">Местоположение магазина на карте.</h2>
       <div class="location__map-wrapper">
         <picture>
@@ -410,7 +410,7 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer data-test="footer" class="footer">
     <div class="footer__container container">
       <div class="footer__header divider">
         <a class="footer__logo" href="#">
