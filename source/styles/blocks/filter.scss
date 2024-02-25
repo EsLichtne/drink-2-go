@@ -36,11 +36,12 @@
 }
 
 .filter__range {
-  margin-top: 11px;
+  margin-top: 10px;
   margin-bottom: 35px;
   cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
+    margin-top: 11px;
     margin-bottom: 31px;
   }
 
