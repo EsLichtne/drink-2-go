@@ -1,7 +1,12 @@
 const select = document.querySelector('.select');
+const label = document.querySelector('.sorting__text');
 
 select.addEventListener('click', () => {
   select.classList.toggle('select--active');
+});
+
+label.addEventListener('click', (event) => {
+  event.preventDefault();
 });
 
 document.addEventListener('click', (event) => {
