@@ -79,5 +79,9 @@
 }
 
 .catalog__pagination {
-  grid-column: 1 / -1;
+  @media (min-width: variables.$desktop-width) {
+    grid-column: 1 / -1;
+    justify-self: end;
+    max-width: 950px;
+  }
 }
