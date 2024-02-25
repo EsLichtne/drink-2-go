@@ -40,14 +40,31 @@
     background-position: center;
     background-size: contain;
     background-color: variables.$text-accent;
+
+    @media (min-width: variables.$tablet-width) {
+      width: auto;
+      height: auto;
+      padding: 0 12px;
+      mask: none;
+      background-color: transparent;
+      transform: none;
+    }
   }
 
   &--back::before {
     transform: rotate(90deg);
+
+    @media (min-width: variables.$tablet-width) {
+      content: "Назад";
+    }
   }
 
   &--forward::before {
     transform: rotate(-90deg);
+
+    @media (min-width: variables.$tablet-width) {
+      content: "Вперёд";
+    }
   }
 
   &:hover,
@@ -102,28 +119,5 @@
     color: variables.$text-primary;
     background-color: transparent;
     pointer-events: none;
-  }
-}
-
-.catalog-pagination__button--special::before {
-  @media (min-width: variables.$tablet-width) {
-    width: auto;
-    height: auto;
-    padding: 0 12px;
-    mask: none;
-    background-color: transparent;
-    transform: none;
-  }
-}
-
-.catalog-pagination__button--back::before {
-  @media (min-width: variables.$tablet-width) {
-    content: "Назад";
-  }
-}
-
-.catalog-pagination__button--forward::before {
-  @media (min-width: variables.$tablet-width) {
-    content: "Вперёд";
   }
 }

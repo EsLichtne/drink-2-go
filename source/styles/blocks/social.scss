@@ -38,7 +38,6 @@
 .social__link:focus {
   background-color: variables.$color-secondary;
 
-  &::before,
   &::before {
     background-color: variables.$color-primary;
   }
