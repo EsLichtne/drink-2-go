@@ -19,6 +19,7 @@
   &:hover,
   &:focus {
     border-color: variables.$color-primary-darker;
+    outline: none;
   }
 
   &:disabled {
