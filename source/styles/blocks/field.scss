@@ -27,3 +27,8 @@
     border-color: variables.$color-disabled;
   }
 }
+
+.field[type="number"] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
